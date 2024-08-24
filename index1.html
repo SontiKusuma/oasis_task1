@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Architecture Design</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Elegant Spaces</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Design Your Dream Space</h1>
+            <p>We bring your vision to life with exceptional interior architecture designs.</p>
+            <a href="#services" class="btn">Our Services</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of professional interior architects dedicated to transforming your spaces into aesthetically pleasing and functional environments.
+            we believe that your space should reflect who you are, what you love, and how you live. Our interior design services transform your spaces 
+            into personalized sanctuaries of comfort, style, and functionality.
+             Whether you desire a modern, minimalist aesthetic or a warm, classic ambiance, we bring your vision to life with creativity and precision.
+            Explore our bespoke design solutions that blend innovative concepts with timeless elegance. 
+            From conceptualization to completion, we are committed to crafting interiors that not only look beautiful but also feel like home.
+        </p>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="architecture2.jpg" alt="Residential Design">
+                <h3>Residential Design</h3>
+                <p>Creating cozy and beautiful living spaces tailored to your needs.</p>
+            </div>
+            <div class="service">
+                <img src="architecture3.jpg" alt="Commercial Design">
+                <h3>Commercial Design</h3>
+                <p>Designing professional and inspiring work environments.</p>
+            </div>
+            <div class="service">
+                <img src="architecture4.jpg" alt="Landscape Design">
+                <h3>Landscape Design</h3>
+                <p>Transforming outdoor areas into elegant and functional landscapes.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="portfolio-item">
+                    <img src="architecture8.jpg" alt="Modern Apartment Interior">
+                    <h3>Modern Apartment Interior</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="architecture7.jpg" alt="Luxury Villa">
+                    <h3>Luxury Villa</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="architecture9.png" alt="Small Space Optimization">
+                    <h3>Small Space Optimization</h3>
+                </div>
+                <!-- Add more items here -->
+            </div>
+            <a class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</a>
+            <a class="carousel-control next" onclick="moveCarousel(1)">&#10095;</a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Interior Design. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const items = document.querySelectorAll('.carousel-inner .portfolio-item');
+            const totalItems = items.length;
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            } else if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            }
+
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
